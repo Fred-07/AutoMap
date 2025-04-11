@@ -342,7 +342,7 @@ if [ "$multivcf" == "No" ]; then
 
         # removing variants with multiple additional alleles and variants in repeats
         if [ "$genome" == "hg19" ]; then
-            mkdir $out/Resources/
+            mkdir -p $out/Resources/
             rep=$out/Resources/repeats.bed
             if [ ! -f "$rep" ]; then
                 cp $here/Resources/repeats.part1.bed.gz $here/Resources/repeats.part2.bed.gz $out/Resources/
@@ -350,7 +350,7 @@ if [ "$multivcf" == "No" ]; then
             fi
         fi
         if [ "$genome" == "hg38" ]; then
-            mkdir $out/Resources/
+            mkdir -p $out/Resources/
             rep=$out/Resources/repeats_hg38.bed
             if [ ! -f "$rep" ]; then
                 cp $here/Resources/repeats_hg38.part1.bed.gz $here/Resources/repeats_hg38.part2.bed.gz $out/Resources/
